@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Chatroom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
+    <style>
+        .pre-scrollable {
+            max-height: 540px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"> TWEET Away </a>
+            </div>
+            <ul class=" navbar-nav navbar-right " > <!-- class="nav navbar-nav navbar-right -->
+                <li id="userLogin" class="nav-item active"><a class="nav-link" href="/"><i class="fa fa-user-circle-o "></i> ChangeUser </a></li>
+            </ul>
+    </div>
+</nav>
+<div class = "container-fluid">
+    <div class = "row">
+        <div class="col">
+            <pre id="chatwindowFrame" class='pre-scrollable'>
+            <div id="chatwindow">
+            <!--append Chat Text Here-->
+            </div>
+            </pre>
+        </div>
+    </div>
+    <div class = "row justify-content-md-center">
+
+            <div id="user" class="text-center ">
+                Username
+            </div>
+
+        <div class="col-md-auto">
+            <form id="messageid" action="/message">
+                <!--<input name="chatbox" type="text"  id="chatbox" /> <!-- placeholder="Username"-->
+                <textarea name="chatbox" id="chatbox" rows="4" cols="50"></textarea>
+                <input type="submit" value="POST" />
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="text-center">
+    <p>
+        Getcho tweet on!
+    </p>
+
+</footer>
+
+
+<!-- Bootstrap-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- icon library -->
+<script src="https://use.fontawesome.com/d7922fb4e2.js"></script>
+
+<!--Custom Scripts -->
+
+<script type="text/javascript" src="chat.js"></script>
+
+</body>
+</html>
